@@ -1,10 +1,14 @@
+import { store } from "@/store/store";
 import {FC, PropsWithChildren} from "react"
+import { Provider } from "react-redux";
+import ReduxToast from "./ReduxToast";
 
 const MainProvider: FC<PropsWithChildren> = ({children}) => {
   return (
-    <div>
+    <Provider store={store}>
+      <ReduxToast />
       {children}
-    </div>
+    </Provider>
   )
 };
 
