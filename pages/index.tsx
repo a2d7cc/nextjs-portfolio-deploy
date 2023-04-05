@@ -1,9 +1,12 @@
+import LayoutClient from '@/components/layouts/client/LayoutClient'
 import type { NextPage } from 'next'
 
 
 const HomePage: NextPage = () => {
   return (
-    <div>Home</div>
+    <LayoutClient>
+      <div>Home</div>
+    </LayoutClient>
   )
 }
 
