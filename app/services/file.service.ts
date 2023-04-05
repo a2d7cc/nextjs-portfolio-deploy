@@ -4,7 +4,7 @@ import axiosInterceptor from "@/api/interceptors";
 export const FileService = {
 	async upload(file: FormData, folder?: string) {
 		return axiosInterceptor.post<{ url: string; name: string }[]>(
-			'/file/upload',
+			'/files',
 			file,
 			{
 				params: {

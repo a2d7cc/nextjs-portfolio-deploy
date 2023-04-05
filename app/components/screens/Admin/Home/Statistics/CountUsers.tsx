@@ -3,7 +3,7 @@ import cn from 'classnames'
 import Image from 'next/image'
 import { FC } from 'react'
 import { useQuery } from 'react-query'
-import styles from '../Admin.module.scss'
+import styles from '../admin-home.module.scss'
 import { UserService } from '@/services/user.service'
 
 const CountUsers: FC = () => {

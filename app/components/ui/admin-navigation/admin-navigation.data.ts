@@ -12,6 +12,6 @@ export const navItems: INavItem[] = [
 	},
 	{
 		title: 'Skills',
-		link: getAdminUrlLink('articles'),
+		link: getAdminUrlLink('skills'),
 	}
 ]

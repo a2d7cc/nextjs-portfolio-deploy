@@ -8,7 +8,7 @@ export const ProjectService = {
 	},
 
 	async getSearch(searchTerm?: string) {
-		return axiosClassic.get<IProject[]>(getProjectsUrl('/search'), {
+		return axiosClassic.get<IProject[]>(getProjectsUrl(''), {
 			params: searchTerm
 				? {
 						searchTerm,
@@ -18,7 +18,7 @@ export const ProjectService = {
 	},
 
 	async byId(id: number) {
-		return axiosClassic.get<IProjectInput>(getProjectsUrl(`/by-id/${id}`))
+		return axiosClassic.get<IProjectInput>(getProjectsUrl(`/${id}`))
 	},
 
 	async create(data: IProjectInput) {

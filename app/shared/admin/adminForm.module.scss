@@ -1,5 +1,6 @@
 .form {
-	@apply mt-12;
+	@apply mt-12 mx-auto;
+	width: 80%;
 	.fields {
 		@apply flex items-center flex-wrap justify-between;
 		> div {

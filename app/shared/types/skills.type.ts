@@ -1,4 +1,4 @@
-export interface ISkills {
+export interface ISkill {
 	id: number
 	slug: string
 	title: string
@@ -6,4 +6,4 @@ export interface ISkills {
 	body: string
 }
 
-export interface IArticleInput extends Omit<ISkills, 'id'> {}
+export interface ISkillInput extends Omit<ISkill, 'id'> {}

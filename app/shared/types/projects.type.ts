@@ -5,7 +5,6 @@ export interface IProject {
 	slug: string
 	body: string
 	poster: string
-	bigPoster: string
 }
 
 export interface IProjectInput extends Omit<IProject, 'id'> {}

@@ -1,11 +1,10 @@
 import AdminNavigation from '@/components/ui/admin-navigation/AdminNavigation'
 import Heading from '@/components/ui/heading/Heading'
 import { FC } from 'react'
-import { IAdmin } from './Admin.interface'
 import Statistics from './Statistics/Statistics'
 import Meta from '@/providers/HeadProvider/Meta/Meta'
 
-const Admin: FC<IAdmin> = () => {
+const AdminHome: FC = () => {
 	return <Meta title="Admin panel">
 		<AdminNavigation />
 		<Heading className="text-center" title='Statistics' /> 
@@ -13,4 +12,4 @@ const Admin: FC<IAdmin> = () => {
 	</Meta>
 }
 
-export default Admin
+export default AdminHome

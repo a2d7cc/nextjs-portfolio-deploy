@@ -1,5 +1,5 @@
 .statistics {
-	@apply flex justify-center mt-10;
+	@apply flex justify-between mt-10;
 
 	.block {
 		@apply air-block w-2/5 py-10 bg-transparent border;
@@ -17,4 +17,19 @@
 		}
 	}
 
+	.popular {
+		@apply flex flex-col text-center p-5 items-center justify-center;
+
+		img {
+			@apply rounded-layout shadow-lg image-like-bg;
+		}
+
+		h2 {
+			@apply mb-1;
+		}
+
+		h3 {
+			@apply opacity-50 font-medium mb-3;
+		}
+	}
 }
