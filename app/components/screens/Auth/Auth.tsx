@@ -2,13 +2,13 @@ import Button from '@/components/ui/form-elements/Button'
 import Heading from '@/components/ui/heading/Heading'
 import { useActions } from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
-import Meta from '@/utils/Meta/Meta'
 import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { IAuth, IAuthInput } from './Auth.interface'
 import styles from './Auth.module.scss'
 import AuthFields from './AuthFields'
 import { useAuthRedirect } from './useAuthRedirect'
+import Meta from '@/providers/HeadProvider/Meta/Meta'
 
 const Auth: FC<IAuth> = () => {
 	useAuthRedirect() // redirect when get user, after successed registration
