@@ -17,4 +17,8 @@ export const UserService = {
 	async deleteUser(id: number) {
 		return axiosInterceptor.delete<number>(GetUsersUrl(id))
 	},
+
+	async getCountUsers() {
+		return axiosInterceptor.get<number>(GetUsersUrl('count'))
+	},
 }
