@@ -4,7 +4,7 @@ import styles from './layout-admin.module.scss'
 const LayoutAdmin: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<>
-				<div className={styles.layout}>{children}</div>
+				<div className={styles.layoutAdmin}>{children}</div>
 		</>
 	)
 }

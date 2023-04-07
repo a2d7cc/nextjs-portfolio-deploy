@@ -1,0 +1,31 @@
+(
+						data.map((project: IProject, index: number) => {
+							return (
+								<motion.div
+									variants={fadeIn('left', 0.3)}
+									initial="hidden"
+									key={index}
+									whileInView={'show'}
+									viewport={{ once: false, amount: 0.02 }}
+									className="lg:basis-2/3 shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
+								>
+									{/* overlay */}
+									<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+									{/* img */}
+									<img
+										className="group-hover:scale-125 transition-all duration-500 lg:max-w-[130%]"
+										src={project.imgLink}
+										alt="Image of project in section 'Projects'"
+									/>
+									{/* pretitle */}
+									<div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
+										<span className="text-gradient">{project.preTitle}</span>
+									</div>
+									{/* Title */}
+									<div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-500 z-50">
+										<span className="text-3xl text-white">{project.title}</span>
+									</div>
+								</motion.div>
+							)
+						})
+					)

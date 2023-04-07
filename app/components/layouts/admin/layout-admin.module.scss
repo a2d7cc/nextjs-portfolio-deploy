@@ -1,5 +1,8 @@
-.layout {
+
+.layoutAdmin {
 	@apply relative;
 	@apply min-h-screen p-layout;
-	margin: 0 5%
+	padding: 0 5%;
+
+	@apply bg-gray-900;
 }

@@ -27,6 +27,11 @@ module.exports = {
 				700: '#F5C521',
 			},
 		},
+		fontFamily: {
+			primary: 'Orbitron',
+			secondary: 'Rajdhani',
+			tertiary: 'Aldrich',
+		},
 		extend: {
 			spacing: {
 				0.5: '0.12rem',

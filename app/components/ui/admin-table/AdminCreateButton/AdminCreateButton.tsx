@@ -4,7 +4,7 @@ import Button from '../../form-elements/Button'
 
 const AdminCreateButton: FC<{ onClick: (data?: any) => void }> = ({ onClick }) => {
 	return (
-		<Button className="btn btn-sm" onClick={onClick}>
+		<Button  onClick={onClick}>
 			Create new
 		</Button>
 	)

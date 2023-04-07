@@ -1,5 +1,11 @@
-.layout {
+
+.layoutClient {
 	@apply relative;
 	@apply min-h-screen p-layout;
-	margin: 0 5%;
+	padding: 0 5%;
+	color: white;
+	font-family: 'Outfit', sans-serif !important;
+
+	
 }
+
