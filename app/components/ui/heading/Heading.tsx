@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 interface IHeading {
-	title: string
+	title: string | undefined
 	className?: string
 }
 

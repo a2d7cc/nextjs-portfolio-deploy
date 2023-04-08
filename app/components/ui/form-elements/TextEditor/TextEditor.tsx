@@ -1,7 +1,5 @@
 import cn from 'classnames'
 import { ContentState, convertToRaw, EditorState } from 'draft-js'
-import draftToHtml from 'draftjs-to-html'
-import htmlToDraft from 'html-to-draftjs'
 import { FC, useEffect, useState } from 'react'
 import { Editor } from 'react-draft-wysiwyg'
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
@@ -9,6 +7,8 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 import { ITextEditor } from '../form.interface'
 import styles from '../form.module.scss'
 import { FileService } from '@/services/file.service'
+import { stateToHTML } from 'draft-js-export-html'
+import { stateFromHTML } from 'draft-js-import-html'
 
 const TextEditor: FC<ITextEditor> = ({
 	placeholder,
@@ -23,12 +23,8 @@ const TextEditor: FC<ITextEditor> = ({
 	useEffect(() => {
 		if (!isUpdated) {
 			const defaultValue = value ? value : ''
-			const blocksFromHtml = htmlToDraft(defaultValue)
-			const contentState = ContentState.createFromBlockArray(
-				blocksFromHtml.contentBlocks,
-				blocksFromHtml.entityMap
-			)
-			const newEditorState = EditorState.createWithContent(contentState)
+
+			const newEditorState = EditorState.createWithContent(stateFromHTML(defaultValue))
 			setEditorState(newEditorState)
 		}
 	}, [value, isUpdated])
@@ -37,7 +33,8 @@ const TextEditor: FC<ITextEditor> = ({
 		setIsUpdated(true)
 		setEditorState(editorState)
 
-		return onChange(draftToHtml(convertToRaw(editorState.getCurrentContent())))
+		/* return onChange(draftToHtml(convertToRaw(editorState.getCurrentContent()))) */
+		return onChange(stateToHTML(editorState.getCurrentContent()))
 	}
 
 	const uploadImageCallBack = async (file: any) => {

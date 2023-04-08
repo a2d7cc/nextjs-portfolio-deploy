@@ -5,7 +5,7 @@ import type { NextPage } from 'next'
 
 const HomePage: NextPage = () => {
   return (
-    <LayoutClient>
+    <LayoutClient isNav={true}>
       <Home />
     </LayoutClient>
   )
