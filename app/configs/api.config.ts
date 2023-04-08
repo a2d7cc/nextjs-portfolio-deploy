@@ -6,3 +6,5 @@ export const getSkillsUrl = (string: string) => `/skills${string}`
 export const getProjectsUrl = (string: string) => `/projects${string}`
 export const GetUsersUrl = (string: string | number) => `/users/${string}`
 
+export const GetResumeUrl = () => `${API_URL}/files/resume`
+

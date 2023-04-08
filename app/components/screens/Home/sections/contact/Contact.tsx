@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form'
 import { IMail } from '@/shared/types/mail.type'
 import Field from '@/components/ui/form-elements/Field'
 import { useMail } from './useMail'
+import TextArea from '@/components/ui/form-elements/TextArea'
 
 const Contact: FC = () => {
 	const {
@@ -57,7 +58,7 @@ const Contact: FC = () => {
 								})}
 								placeholder="Email"
 								error={errors.email}
-								// style={{ width: '31%' }}
+								style={{ width: '100%' }}
 							/>
 
 							<Field
@@ -66,18 +67,18 @@ const Contact: FC = () => {
 								})}
 								placeholder="Name"
 								error={errors.name}
-								// style={{ width: '31%' }}
+								style={{ width: '100%' }}
 							/>
 
 
 
-							<Field
+							<TextArea
 								{...register('body', {
 									required: 'Message is required!',
 								})}
 								placeholder="Message"
 								error={errors.body}
-								// style={{ width: '31%' }}
+								style={{ width: '100%' }}
 							/>
 						<Button className="btn btn-lg">Send message</Button>
 					</motion.form>

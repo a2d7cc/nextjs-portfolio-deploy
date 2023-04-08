@@ -1,3 +1,4 @@
+import ResumeLink from '@/components/ui/ResumeLink'
 import Button from '@/components/ui/form-elements/Button'
 import { fadeIn } from '@/utils/Animate/variants'
 import { motion } from 'framer-motion'
@@ -92,9 +93,7 @@ const About: FC = () => {
 									Contact me
 								</LinkScroll>
 							</Button>
-							<a href="#" className="text-gradient btn-link">
-								My Portfolio
-							</a>
+							<ResumeLink />
 						</div>
 					</motion.div>
 				</div>

@@ -7,8 +7,17 @@ export interface IFieldProps {
 	error?: FieldError | undefined
 }
 
-type TypeInputPropsField = InputHTMLAttributes<HTMLInputElement> & IFieldProps
+export interface IFieldTextAreaProps {
+	placeholder: string
+	error?: FieldError | undefined,
+	rows?: number,
+	cols?: number
+}
 
+type TypeInputPropsField = InputHTMLAttributes<HTMLInputElement> & IFieldProps
+type TypeTextAreaPropsField = InputHTMLAttributes<HTMLTextAreaElement> & IFieldTextAreaProps
+
+export interface IFieldTextArea extends TypeTextAreaPropsField {}
 export interface IField extends TypeInputPropsField {}
 
 export interface IUploadField {

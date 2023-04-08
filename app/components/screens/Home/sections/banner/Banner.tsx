@@ -9,6 +9,7 @@ import Button from '@/components/ui/form-elements/Button'
 
 import { fadeIn } from '@/utils/Animate/variants'
 import Image from 'next/image'
+import ResumeLink from '@/components/ui/ResumeLink'
 
 const Banner: FC = () => {
 	return (
@@ -76,9 +77,7 @@ const Banner: FC = () => {
 									Contact me
 								</LinkScroll>
 							</Button>
-							<a href="#" className="text-gradient btn-link">
-								My portfolio
-							</a>
+							<ResumeLink />
 						</motion.div>
 						{/* socials */}
 						<motion.div

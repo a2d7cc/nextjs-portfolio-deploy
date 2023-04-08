@@ -9,7 +9,7 @@
 		@apply block;
 
 		> span {
-			@apply text-xs uppercase text-gray-600 block;
+			@apply text-xs uppercase text-white block;
 		}
 	}
 }
@@ -18,7 +18,15 @@
 	@apply text-left mb-8;
 
 	input {
-		@apply outline-border-none focus:ring-0 bg-transparent text-gray-500 w-full m-0 px-0;
+		@apply outline-border-none focus:ring-0 bg-transparent text-white w-full m-0 px-0;
+	}
+}
+
+.textarea {
+	@apply text-left mb-8;
+	
+	textarea {
+		@apply outline-border-none focus:ring-0 bg-transparent text-white w-full mx-0 px-0 my-5 py-5;
 	}
 }
 
