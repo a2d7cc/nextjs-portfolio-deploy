@@ -11,11 +11,11 @@ const Skill: FC = () => {
     const {isLoading, data: skill} = useSkill()
 
 
-  return <div className={styles.container}>
+  return <div className="">
     {isLoading? <SkeletonLoader count={20} /> : (
-        <div className={styles.skill}>
-        <Heading className="text-center text-black text-5xl" title={skill?.title} />
-        <div dangerouslySetInnerHTML={{__html: skill?.body || ''}}/>
+        <div className="">
+        <span className="text-gradient text-5xl" >{skill?.title}</span>
+        <div className="rounded-t-lg mt-5 bg-white text-black py-10 px-10 leading-loose tracking-wide text-xl" dangerouslySetInnerHTML={{__html: skill?.body || ''}}/>
         </div>
         
     )}

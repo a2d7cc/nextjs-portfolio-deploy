@@ -10,7 +10,6 @@ import Link from 'next/link'
 
 const Work: FC = () => {
 	const { isLoading, data } = useProjects()
-	console.log(data)
 
 	return (
 		<section id="work" className="section">
@@ -35,14 +34,18 @@ const Work: FC = () => {
 							architecto. Nihil nesciunt quasi doloribus excepturi eius
 							consequatur ab quis, doloremque modi pariatur!
 						</p>
-						<Button className="btn btn-sm">View all projects</Button>
+						
+						<Link href='/projects'>
+						<button className="btn btn-sm">View all projects</button>
+						</Link>
+						
 					</motion.div>
 
 					{/* Projects */}
 					{isLoading ? (
 						<SkeletonLoader count={1} height={48} className="mt-4" />
 					) : data?.primary ? (
-						<Link href={data?.primary?.link}>
+					<Link href={data?.primary.link}>
 						<motion.div
 							variants={fadeIn('left', 0.3)}
 							initial="hidden"
@@ -52,7 +55,7 @@ const Work: FC = () => {
 							className="lg:basis-2/3 shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
 						>
 							
-
+							
 							{/* overlay */}
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
@@ -71,8 +74,10 @@ const Work: FC = () => {
 									{data.primary.title}
 								</span>
 							</div>
+							
 						</motion.div>
-						</Link>
+					</Link>
+
 					) : null}
 				</div>
 

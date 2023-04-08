@@ -13,7 +13,6 @@ import Link from 'next/link'
 
 const Services: FC = () => {
 	const {isLoading, data} = useSkills()
-	console.log(data)
 
 	return (
 		<section id="services" className="section">
@@ -38,7 +37,9 @@ const Services: FC = () => {
 							I'm a freelancer Front-end Developer with over 5 years of
 							experience.
 						</h3>
-						<Button className="btn btn-sm ">See my work</Button>
+						<Link href='/projects'>
+						<button className="btn btn-sm">View all projects</button>
+						</Link>
 					</div>
 					{/* services */}
 					<motion.div

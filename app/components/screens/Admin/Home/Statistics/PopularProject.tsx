@@ -18,8 +18,6 @@ const PopularProject: FC = () => {
 		}
 	)
 
-	console.log(project)
-
 	return (
 		<div className={cn(styles.block, styles.popular)}>
 			<SubHeading title="The most popular" />
