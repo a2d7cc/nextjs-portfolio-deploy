@@ -7,9 +7,12 @@ import Button from '@/components/ui/form-elements/Button'
 import SkeletonLoader from '@/components/ui/SkeletonLoader'
 import { useProjects } from './useProjects'
 import Link from 'next/link'
+import { IProject } from '@/shared/types/projects.type'
 
-const Work: FC = () => {
-	const { isLoading, data } = useProjects()
+const Work: FC<{projects: IProject[]}> = ({projects}) => {
+	/* const { isLoading, data } = useProjects() */
+	const primary = projects[0]
+	const secondary = projects.slice(1, 4)
 
 	return (
 		<section id="work" className="section">
@@ -26,7 +29,7 @@ const Work: FC = () => {
 					>
 						<h2 className="h2 leading-tight text-accent">
 							My Latest <br />
-							Work.
+							Work
 						</h2>
 						<p className="max-w-lg mb-4">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -42,14 +45,11 @@ const Work: FC = () => {
 					</motion.div>
 
 					{/* Projects */}
-					{isLoading ? (
-						<SkeletonLoader count={1} height={48} className="mt-4" />
-					) : data?.primary ? (
-					<Link href={data?.primary.link}>
+					<Link href={primary.link || ''}>
 						<motion.div
 							variants={fadeIn('left', 0.3)}
 							initial="hidden"
-							key={data.primary.id}
+							key={primary.id}
 							whileInView={'show'}
 							viewport={{ once: false, amount: 0.02 }}
 							className="lg:basis-2/3 shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
@@ -61,24 +61,22 @@ const Work: FC = () => {
 							{/* img */}
 							<img
 								className="group-hover:scale-125 transition-all duration-500 lg:max-w-[130%]"
-								src={data.primary.poster}
+								src={primary.poster}
 								alt="Image of project in section 'Projects'"
 							/>
 							{/* pretitle */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-								<span className="text-gradient">{data.primary.subTitle}</span>
+								<span className="text-gradient">{primary.subTitle}</span>
 							</div>
 							{/* Title */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-500 z-50">
 								<span className="text-3xl text-white">
-									{data.primary.title}
+									{primary.title}
 								</span>
 							</div>
 							
 						</motion.div>
 					</Link>
-
-					) : null}
 				</div>
 
 				{/* Projects */}
@@ -90,12 +88,10 @@ const Work: FC = () => {
 					className="flex-1 flex flex-col lg:flex-row gap-4"
 				>
 					{/* Projects */}
-					{isLoading ? (
-						<SkeletonLoader count={1} height={48} className="mt-4" />
-					) : (
-						data?.secondary.map((project, index) => {
+					{
+						secondary.map((project, index) => {
 							return (
-								<Link key={project.title} href={project.link}>
+								<Link key={project.title} href={project.link || ''}>
 																	<div
 									key={project.id}
 									className=" shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
@@ -120,7 +116,8 @@ const Work: FC = () => {
 								</Link>
 							)
 						})
-					)}
+					}
+					
 				</motion.div>
 			</div>
 		</section>

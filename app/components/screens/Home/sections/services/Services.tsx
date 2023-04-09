@@ -9,10 +9,11 @@ import { services } from './services.data'
 import { useSkills } from './useSkills'
 import SkeletonLoader from '@/components/ui/SkeletonLoader'
 import Link from 'next/link'
+import { ISkill } from '@/shared/types/skills.type'
 
 
-const Services: FC = () => {
-	const {isLoading, data} = useSkills()
+const Services: FC<{skills: ISkill[]}> = ({skills}) => {
+	/* const {isLoading, data} = useSkills() */
 
 	return (
 		<section id="services" className="section">
@@ -48,9 +49,9 @@ const Services: FC = () => {
 						whileInView={'show'}
 						viewport={{ once: false, amount: 0.3 }}
 					>
-						{isLoading ?
-						<SkeletonLoader count={1} height={48} className="mt-4" /> :
-						(data?.map((service, index) => {
+						{
+
+						(skills.map((service, index) => {
 							const { title, description, link } = service
 							return (
 								<div
@@ -73,7 +74,7 @@ const Services: FC = () => {
 											<BsArrowUpRight />
 										</a>
 										
-											<Link  className="text-gradient text-sm" href={link}>
+											<Link  className="text-gradient text-sm" href={link || ''}>
 											<a className="text-gradient text-sm" href="">Learn more</a>
 											</Link>
 									</div>

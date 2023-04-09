@@ -9,7 +9,7 @@ import Services from './sections/services/Services'
 import Work from './sections/work/Work'
 import Meta from '@/providers/HeadProvider/Meta/Meta'
 
-const Home: FC<IHome> = () => {
+const Home: FC<IHome> = ({projects, skills}) => {
 	return (
 		<Meta
 			title="Portfolio"
@@ -18,8 +18,8 @@ const Home: FC<IHome> = () => {
 			<Header />
 			<Banner />
 			<About />
-			<Services />
-			<Work />
+			<Services skills={skills} />
+			<Work projects={projects} />
 			<Contact />
 		</Meta>
 	)

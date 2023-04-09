@@ -4,23 +4,25 @@ import styles from './projects.module.scss'
 import SkeletonLoader from "@/components/ui/SkeletonLoader";
 import Heading from "@/components/ui/heading/Heading";
 import Link from "next/link";
+import { IProject } from "@/shared/types/projects.type";
 
+interface IProjectPage {
+	projects: IProject[]
+}
 
-const Projects: FC = () => {
-    const {isLoading, data} = useProjects()
+const Projects: FC<IProjectPage> = ({projects}) => {
+    /* const {isLoading, data} = useProjects() */
 
 
     return (  
     <div className="py-20">
          <span className="text-gradient text-5xl" >List of projects</span>
          <div className="grid grid-cols-2 gap-x-16 gap-y-16 py-20">
-        					{isLoading ? (
-						<SkeletonLoader count={1} height={48} className="mt-4" />
-					) : (
+        					{(
                        
-						data?.map((project, index) => {
+						projects.map((project, index) => {
 							return (
-								<Link key={project.title} href={project.link}>
+								<Link key={project.title} href={project.link || ''}>
 																	<div
 									key={project.id}
 									className="group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
