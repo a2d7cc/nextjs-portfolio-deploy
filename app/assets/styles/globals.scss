@@ -12,8 +12,13 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Outfit', sans-serif !important;
+	overflow-x: hidden; 
+	width: 100%;
+	box-sizing: border-box;
 
+	background-color: #050916;
 }
+
 
 a {
 	color: inherit;
@@ -102,7 +107,7 @@ input:focus {
 		@apply h-[48px] px-6 text-sm;
 	}
 	.btn-lg {
-		@apply h-[56px] px-20 text-base;
+		@apply h-[56px] px-14 text-base;
 	}
 	.btn-link {
 		@apply text-base;
@@ -112,6 +117,6 @@ input:focus {
 	}
 
 	.section {
-		@apply py-8 lg:py-24 lg:min-h-screen flex items-center;
+		@apply py-8 lg:min-h-screen flex items-center;
 	}
 }

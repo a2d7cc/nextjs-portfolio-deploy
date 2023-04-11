@@ -4,6 +4,7 @@ export interface ISkill {
 	title: string
 	description: string
 	body: string
+	poster?: string
 	link?: string
 }
 

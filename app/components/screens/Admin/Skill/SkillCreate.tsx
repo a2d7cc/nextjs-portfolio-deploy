@@ -72,6 +72,27 @@ const SkillCreate: FC = () => {
 							/>
 
 
+						<Controller
+							name="poster"
+							control={control}
+							defaultValue=""
+							render={({
+								field: { value, onChange },
+								fieldState: { error },
+							}) => (
+								<UploadField
+									placeholder="Poster"
+									error={error}
+									folder="skills"
+									image={value}
+									onChange={onChange}
+								/>
+							)}
+							rules={{
+								required: 'Poster is required!',
+							}}
+						/>
+
 
 						<Controller
 							name="body"

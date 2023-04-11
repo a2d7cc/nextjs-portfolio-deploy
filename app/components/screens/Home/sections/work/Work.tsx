@@ -18,20 +18,21 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 		<section id="work" className="section">
 			<div className="container mx-auto">
 				{/* Work Describe with main project */}
-				<div className="flex-1 flex flex-col lg:flex-row gap-x-12 gap-y-12 mb-10  lg:mb-10">
+				<div className="flex-1 flex flex-col lg:flex-row lg:justify-between gap-x-12 gap-y-12 mb-10  lg:mb-10
+				max-[600px]:mb-5">
 					{/* text */}
 					<motion.div
 						variants={fadeIn('right', 0.3)}
 						initial="hidden"
 						whileInView={'show'}
-						viewport={{ once: false, amount: 0.1 }}
-						className="max-w-screen-sm"
+						viewport={{ once: true, amount: 0.1 }}
+						className="text-center lg:text-left lg:max-w-xl"
 					>
-						<h2 className="h2 leading-tight text-accent">
+						<h2 className="h2 leading-tight text-accent md:text-6xl md:mb-10 lg:text-5xl">
 							My Latest <br />
 							Work
 						</h2>
-						<p className="max-w-lg mb-4">
+						<p className="mb-4 md:mb-8 md:text-xl lg:text-lg">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
 							totam dolores nemo debitis qui tempora. Maxime, perspiciatis
 							architecto. Nihil nesciunt quasi doloribus excepturi eius
@@ -39,7 +40,9 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 						</p>
 						
 						<Link href='/projects'>
-						<button className="btn btn-sm">View all projects</button>
+						<button className="btn btn-sm
+						max-[600px]:text-base mt-4 md:btn-lg lg:btn-sm
+						">View all projects</button>
 						</Link>
 						
 					</motion.div>
@@ -51,8 +54,8 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 							initial="hidden"
 							key={primary.id}
 							whileInView={'show'}
-							viewport={{ once: false, amount: 0.02 }}
-							className="lg:basis-2/3 shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
+							viewport={{ once: true, amount: 0.02 }}
+							className="lg:basis-2/4 shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
 						>
 							
 							
@@ -60,7 +63,7 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
 							<img
-								className="group-hover:scale-125 transition-all duration-500 lg:max-w-[130%]"
+								className="group-hover:scale-125 transition-all duration-500 lg:max-w-[180%] lg:max-w-[130%]"
 								src={primary.poster}
 								alt="Image of project in section 'Projects'"
 							/>
@@ -84,7 +87,7 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 					variants={fadeIn('right', 0.3)}
 					initial="hidden"
 					whileInView={'show'}
-					viewport={{ once: false, amount: 0.1 }}
+					viewport={{ once: true, amount: 0.1 }}
 					className="flex-1 flex flex-col lg:flex-row gap-4"
 				>
 					{/* Projects */}

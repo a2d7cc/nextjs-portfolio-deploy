@@ -19,4 +19,6 @@ const LayoutClient: FC<PropsWithChildren & IClient> = ({ children, isNav=false})
 	)
 }
 
+//"bg-[url('/images/site-bg.jpg')] bg-no-repeat bg-cover"
+
 export default LayoutClient

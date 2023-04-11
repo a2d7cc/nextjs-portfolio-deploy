@@ -11,7 +11,7 @@ const Project: FC<{project: IProject}> = ({project}) => {
         <div className="rounded ">
         <span className="text-gradient text-7xl mb-5" >{project.title}</span>
         <img className="mt-10 rounded-t-lg object-cover object-center h-80 w-full " src={project.poster} alt="" />
-        <div className="bg-white text-black py-10 px-10 leading-loose tracking-wide text-xl" dangerouslySetInnerHTML={{__html: project.body}}/>
+        <div className="bg-white text-black py-10 px-10 leading-loose tracking-wide text-base md:text-xl" dangerouslySetInnerHTML={{__html: project.body}}/>
         </div>
 
   </div>

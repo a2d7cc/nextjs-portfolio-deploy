@@ -5,7 +5,7 @@ import { bottomMenu } from './menu.data'
 
 const Nav: FC = () => {
 	return (
-		<nav className="client-menu fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50">
+		<nav className="client-menu hidden lg:block fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50">
 			<div className="container mx-auto">
 				{/* nav inner */}
 				<div

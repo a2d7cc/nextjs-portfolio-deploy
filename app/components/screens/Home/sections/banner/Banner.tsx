@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { FC } from 'react'
-import { FaDribbble, FaGithub, FaYoutube } from 'react-icons/fa'
+import { FaDribbble, FaGithub, FaGoogle, FaInstagram, FaMailBulk, FaMailchimp, FaYoutube } from 'react-icons/fa'
 import { Link as LinkScroll } from 'react-scroll'
 import { TypeAnimation } from 'react-type-animation'
 
@@ -13,26 +13,32 @@ import ResumeLink from '@/components/ui/ResumeLink'
 
 const Banner: FC = () => {
 	return (
-		<section className="min-h-[85vh] lg:min-h-[75vh] flex items-center">
+		<section className="flex items-center">
 			<div className="container mx-auto">
-				<div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
+				<div className="flex lg:justify-between lg:pt-10 flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
 					{/* text */}
 					<div className="flex-1 text-center font-scondary lg:text-left">
-						<motion.h1
-							variants={fadeIn('up', 0.3)}
-							initial="hidden"
-							whileInView={'show'}
-							viewport={{ once: false, amount: 0.7 }}
-							className="text-[65px] font-bold leading-[0.8] lg:text-[90px]"
-						>
-							{/* ALEX <span>CHUKRII</span> */}
-						</motion.h1>
+											{/* image */}
+					<div
+						className=" lg:hidden flex-1"
+					>
+					<Image 
+						src="/images/hands.svg"
+						width="500px"
+						height="500px"
+					/>
+					</div>
 						<motion.div
 							variants={fadeIn('up', 0.4)}
 							initial="hidden"
 							whileInView={'show'}
-							viewport={{ once: false, amount: 0.7 }}
-							className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
+							viewport={{ once: true, amount: 0.7 }}
+							className="mb-6 
+							lg:text-7xl
+							max-[600px]:text-5xl max-[500px]:text-4xl
+							 max-[600px]:mt-12 max-[500px]:mt-0
+							 md:text-7xl
+							 font-secondary font-semibold uppercase leading-[1]"
 						>
 							<span className="text-white mr-4">
 								I am a <br />
@@ -50,8 +56,12 @@ const Banner: FC = () => {
 							variants={fadeIn('up', 0.5)}
 							initial="hidden"
 							whileInView={'show'}
-							viewport={{ once: false, amount: 0.7 }}
-							className="mb-8  max-w-lg mx-auto lg:mx-0"
+							viewport={{ once: true, amount: 0.7 }}
+							className="mb-8  max-w-lg mx-auto lg:mx-0
+							lg:text-xl
+							text-sm
+								md:text-xl							
+							"
 						>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
 							corporis voluptate saepe omnis totam, cumque architecto adipisci.
@@ -60,10 +70,20 @@ const Banner: FC = () => {
 							variants={fadeIn('up', 0.6)}
 							initial="hidden"
 							whileInView={'show'}
-							viewport={{ once: false, amount: 0.7 }}
-							className="flex  max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
+							viewport={{ once: true, amount: 0.7 }}
+							className="flex lg:flex-row lg:max-w-max gap-x-6 items-center mb-12 md:mb-8 mx-auto lg:mx-0 
+							lg:mt-12
+							md:justify-center
+							flex-col mb-6
+							lg:mb-4"
 						>
-							<Button className="btn btn-lg">
+							<Button className="btn 
+							lg:btn-lg
+							md:hidden
+							lg:block
+							mb-6
+							lg:mb-0
+							">
 								<LinkScroll
 									to="contact"
 									activeClass="active"
@@ -77,26 +97,27 @@ const Banner: FC = () => {
 									Contact me
 								</LinkScroll>
 							</Button>
-							<ResumeLink />
+							<ResumeLink className="text-3xl md:text-4xl lg:text-2xl" />
 						</motion.div>
 						{/* socials */}
 						<motion.div
 							variants={fadeIn('up', 0.7)}
 							initial="hidden"
 							whileInView={'show'}
-							viewport={{ once: false, amount: 0.7 }}
-							className="flex text-[20px] gap-x-6 max-w-max mx-auto
+							viewport={{ once: true, amount: 0.7 }}
+							className="flex lg:pl-4 text-4xl lg:text-3xl md:text-4xl gap-x-6 max-w-max mx-auto
 					lg:mx-0"
 						>
 							<a href="#">
-								<FaYoutube />
+								<FaInstagram />
+							</a>
+							<a href="#">
+								<FaGoogle />
 							</a>
 							<a href="#">
 								<FaGithub />
 							</a>
-							<a href="#">
-								<FaDribbble />
-							</a>
+
 						</motion.div>
 					</div>
 
@@ -105,7 +126,7 @@ const Banner: FC = () => {
 						variants={fadeIn('down', 0.5)}
 						initial="hidden"
 						whileInView={'show'}
-						className="hidden lg:flex flex-1"
+						className="hidden lg:block lg:flex justify-end flex-1"
 					>
 					<Image 
 						src="/images/hands.svg"
