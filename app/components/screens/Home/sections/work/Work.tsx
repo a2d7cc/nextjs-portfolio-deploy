@@ -32,7 +32,7 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 							My Latest <br />
 							Work
 						</h2>
-						<p className="mb-4 md:mb-8 md:text-xl lg:text-lg">
+						<p className="mb-4 md:mb-8 text-sm md:text-xl lg:text-lg">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
 							totam dolores nemo debitis qui tempora. Maxime, perspiciatis
 							architecto. Nihil nesciunt quasi doloribus excepturi eius
@@ -41,18 +41,20 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 						
 						<Link href='/projects'>
 						<button className="btn btn-sm
-						max-[600px]:text-base mt-4 md:btn-lg lg:btn-sm
+						mt-4 md:btn-lg lg:btn-sm
 						">View all projects</button>
 						</Link>
 						
 					</motion.div>
 
 					{/* Projects */}
-					<Link href={primary.link || ''}>
+					{
+						primary? 
+											<Link href={primary?.link || ''}>
 						<motion.div
 							variants={fadeIn('left', 0.3)}
 							initial="hidden"
-							key={primary.id}
+							key={primary?.id}
 							whileInView={'show'}
 							viewport={{ once: true, amount: 0.02 }}
 							className="lg:basis-2/4 shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
@@ -64,22 +66,24 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 							{/* img */}
 							<img
 								className="group-hover:scale-125 transition-all duration-500 lg:max-w-[180%] lg:max-w-[130%]"
-								src={primary.poster}
+								src={primary?.poster}
 								alt="Image of project in section 'Projects'"
 							/>
 							{/* pretitle */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-								<span className="text-gradient">{primary.subTitle}</span>
+								<span className="text-gradient">{primary?.subTitle}</span>
 							</div>
 							{/* Title */}
 							<div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-500 z-50">
 								<span className="text-3xl text-white">
-									{primary.title}
+									{primary?.title}
 								</span>
 							</div>
 							
 						</motion.div>
-					</Link>
+					</Link> :
+					null
+					}
 				</div>
 
 				{/* Projects */}

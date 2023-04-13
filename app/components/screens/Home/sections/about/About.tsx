@@ -52,7 +52,7 @@ const About: FC = () => {
 							sit voluptatem. Fugit cupiditate architecto libero?
 						</p>
 						{/* stats */}
-						<div className="flex gap-x-6 lg:gap-x-10 my-8  lg:justify-start md:justify-center">
+						<div className="flex gap-x-6 lg:gap-x-10 my-8  lg:justify-start justify-center">
 							<div>
 								<div className="text-[40px] font-tertialy text-gradient mb-2">
 									{inView ? <CountUp start={0} end={13} duration={3} /> : null}
@@ -87,10 +87,14 @@ const About: FC = () => {
 							</div>
 						</div>
 						<div className="flex gap-x-8 items-center
-						justify-between lg:justify-start  max-[600px]:mx-0 max-[600px]:flex-col max-[600px]:mb-6
+						justify-between md:justify-center lg:justify-start  max-[600px]:mx-0 max-[600px]:flex-col max-[600px]:mb-6
 						">
-							<Button className="btn btn-lg 
-							max-[600px]:mb-6
+							<Button className="btn 
+														lg:btn-lg
+														md:hidden
+														lg:block
+														max-sm:mb-4
+														lg:mb-0
 							">
 								<LinkScroll
 									to="contact"
@@ -105,7 +109,7 @@ const About: FC = () => {
 									Contact me
 								</LinkScroll >
 							</Button>
-							<ResumeLink className="text-3xl lg:text-xl" />
+							<ResumeLink className="text-2xl md:text-4xl lg:text-xl" />
 						</div>
 					</motion.div>
 				</div>

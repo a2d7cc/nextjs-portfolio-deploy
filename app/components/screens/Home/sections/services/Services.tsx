@@ -36,7 +36,7 @@ const Services: FC<{skills: ISkill[]}> = ({skills}) => {
 					"
 					>
 						<h2 className="h2 text-accent mb-6 md:text-6xl lg:text-4xl">What i do.</h2>
-						<h3 className="h3 mb-16 lg:mb-8 text-base max-[600px]:mb-8 md:text-2xl lg:text-xl lg:max-w-[500px]">
+						<h3 className="h3 pr-4 mb-16 lg:mb-8 text-base max-[600px]:mb-8 md:text-2xl lg:text-xl lg:max-w-[500px]">
 							I'm a freelancer Front-end Developer with over 5 years of
 							experience.
 						</h3>

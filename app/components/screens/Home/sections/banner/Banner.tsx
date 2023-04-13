@@ -97,7 +97,7 @@ const Banner: FC = () => {
 									Contact me
 								</LinkScroll>
 							</Button>
-							<ResumeLink className="text-3xl md:text-4xl lg:text-2xl" />
+							<ResumeLink className="text-2xl md:text-4xl lg:text-2xl" />
 						</motion.div>
 						{/* socials */}
 						<motion.div
