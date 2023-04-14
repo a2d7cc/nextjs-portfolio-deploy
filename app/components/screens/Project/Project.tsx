@@ -18,7 +18,7 @@ const Project: FC<{project: IProject}> = ({project}) => {
         <span className="text-gradient lg:text-7xl md:text-6xl  text-4xl md:leading-relaxed lg:leading-relaxed leading-relaxed" >{project.title}</span>
         </div>
         <div className="group relative overflow-hidden">
-        <img className="mt-2 lg:mt-6 lg:mt-10 brightness-95 group-hover:scale-105 group-hover:brightness-100 transition-all duration-500  object-cover object-center  md:h-96 w-full " src={project.poster} alt="" />        
+        <img className="mt-2 lg:mt-6 lg:mt-10 brightness-95 group-hover:scale-105 group-hover:brightness-100 transition-all duration-500  object-cover object-center  md:h-[28rem] lg:h-[38rem] w-full " src={project.poster} alt="" />        
         <div className="absolute  flex flex-col left-4 bottom-4 w-9/12">
           <span className="text-2xl md:text-5xl mb-2 md:mb-4 text-gradient">Stack:</span>
           <ul className="flex flex-wrap ">
@@ -29,7 +29,7 @@ const Project: FC<{project: IProject}> = ({project}) => {
         })}
         </ul>
         </div>
-        <a className="absolute max-md:left-4 max-sm:top-4 md:right-16 md:bottom-8 lg:right-16 lg:bottom-8 flex items-center text-2xl md:text-4xl color-black" href={project.git} target="_blank">
+        <a className="absolute max-md:left-4 max-md:top-4 md:max-lg:right-16 md:max-lg:bottom-8 lg:right-16 lg:bottom-8 flex items-center text-2xl md:text-4xl color-black" href={project.git} target="_blank">
 								<FaGithub  /> <span className="ml-2 text-xl text-gradient">Github</span>
 					</a>
         </div>

@@ -63,8 +63,7 @@ const Banner: FC = () => {
 								md:text-xl							
 							"
 						>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-							corporis voluptate saepe omnis totam, cumque architecto adipisci.
+							Engaged in Web site development, both client and server side. Work is focused on performance, design aesthetics and following modern trends.
 						</motion.p>
 						<motion.div
 							variants={fadeIn('up', 0.6)}
@@ -105,16 +104,16 @@ const Banner: FC = () => {
 							initial="hidden"
 							whileInView={'show'}
 							viewport={{ once: true, amount: 0.7 }}
-							className="flex lg:pl-4 text-4xl lg:text-3xl md:text-4xl gap-x-6 max-w-max mx-auto
+							className="flex xl:mt-4 lg:pl-4 text-4xl lg:text-3xl md:text-4xl gap-x-6 max-w-max mx-auto
 					lg:mx-0"
 						>
-							<a href="#">
+							<a href="https://www.instagram.com/o.o__ii/"  className="hover:scale-125 ease-out duration-300"  target='_blank' >
 								<FaInstagram />
 							</a>
-							<a href="#">
+							<a href="mailto:chukrii.alex@gmail.com"  className="hover:scale-125 ease-out duration-300"  target='_blank'>
 								<FaGoogle />
 							</a>
-							<a href="#">
+							<a href="https://github.com/a2d7cc"  className="hover:scale-125 ease-out duration-300"  target='_blank'>
 								<FaGithub />
 							</a>
 

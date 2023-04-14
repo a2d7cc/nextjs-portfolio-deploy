@@ -46,6 +46,10 @@ input:focus {
 	@apply w-1/2 mt-12;
 }
 
+figure > img {
+	@apply mx-auto
+}
+
 
 /* Youtube */
 .btn {

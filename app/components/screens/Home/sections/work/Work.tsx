@@ -18,7 +18,7 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 		<section id="work" className="section">
 			<div className="container mx-auto">
 				{/* Work Describe with main project */}
-				<div className="flex-1 flex flex-col lg:flex-row lg:justify-between gap-x-12 gap-y-12 mb-10  lg:mb-10
+				<div className="flex-1 flex flex-col xl:flex-row xl:justify-between gap-x-12 gap-y-12 mb-10  lg:mb-10
 				max-[600px]:mb-5">
 					{/* text */}
 					<motion.div
@@ -26,13 +26,13 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 						initial="hidden"
 						whileInView={'show'}
 						viewport={{ once: true, amount: 0.1 }}
-						className="text-center lg:text-left lg:max-w-xl"
+						className="text-center xl:text-left xl:max-w-xl"
 					>
 						<h2 className="h2 leading-tight text-accent md:text-6xl md:mb-10 lg:text-5xl">
 							My Latest <br />
 							Work
 						</h2>
-						<p className="mb-4 md:mb-8 text-sm md:text-xl lg:text-lg">
+						<p className="mb-4 md:mb-8 text-sm md:text-xl lg:text-xl">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
 							totam dolores nemo debitis qui tempora. Maxime, perspiciatis
 							architecto. Nihil nesciunt quasi doloribus excepturi eius
@@ -57,7 +57,7 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 							key={primary?.id}
 							whileInView={'show'}
 							viewport={{ once: true, amount: 0.02 }}
-							className="lg:basis-2/4 shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
+							className="lg:basis-2/4 lg:h-[35rem] shrink group relative overflow-hidden cursor-pointer border-2 border-white/50 rounded-xl"
 						>
 							
 							
@@ -65,7 +65,7 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 							<div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
 							{/* img */}
 							<img
-								className="group-hover:scale-125 transition-all duration-500 lg:max-w-[180%] lg:max-w-[130%]"
+								className="group-hover:scale-125 transition-all duration-500 lg:h-[40rem] object-cover object-center"
 								src={primary?.poster}
 								alt="Image of project in section 'Projects'"
 							/>
@@ -92,7 +92,7 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 					initial="hidden"
 					whileInView={'show'}
 					viewport={{ once: true, amount: 0.1 }}
-					className="flex-1 flex flex-col lg:flex-row gap-4"
+					className="flex-1 flex flex-col lg:flex-row gap-10"
 				>
 					{/* Projects */}
 					{
@@ -111,14 +111,15 @@ const Work: FC<{projects: IProject[]}> = ({projects}) => {
 										src={project.poster}
 										alt="Image of project in section 'Projects'"
 									/>
-									{/* pretitle */}
-									<div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-										<span className="text-gradient">{project.subTitle}</span>
-									</div>
 									{/* Title */}
 									<div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-500 z-50">
 										<span className="text-3xl text-white">{project.title}</span>
 									</div>
+									{/* pretitle */}
+									<div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
+										<span className="text-gradient">{project.subTitle}</span>
+									</div>
+	
 								</div>
 								</Link>
 							)

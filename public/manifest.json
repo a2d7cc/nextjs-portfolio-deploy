@@ -1,11 +1,11 @@
 {
-	"theme_color": "#E30B13",
-	"background_color": "#191B1F",
+	"theme_color": "#770BE3",
+	"background_color": "#4E3366",
 	"scope": "/",
 	"start_url": "/",
-	"name": "Online Cinema",
-	"app_name": "Online Cinema",
-	"description": "Watch MovieApp movies",
+	"name": "Portfolio",
+	"app_name": "Portfolio website",
+	"description": "Welcome to my personal developer website!",
 	"icons": [
 		{
 			"src": "/favicons/apple-touch-icon-72x72.png",
