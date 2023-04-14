@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	ul, ol {
+	  list-style: revert;
+	  @apply pl-6 md:pl-10
+	}
+  }
 
 @import 'react-redux-toastr/src/styles/index';
 

@@ -33,8 +33,8 @@ const Project: FC<{project: IProject}> = ({project}) => {
 								<FaGithub  /> <span className="ml-2 text-xl text-gradient">Github</span>
 					</a>
         </div>
-        <div className="bg-white text-black py-10 px-10 leading-loose tracking-wide text-base md:text-xl lg:text-2xl" dangerouslySetInnerHTML={{__html: project.body}}/>
-
+        <div className="list-disc bg-white text-black py-14 px-14 sm:px-20 md:py-18 lg:px-28 leading-loose tracking-wide text-base  text-base md:text-xl lg:text-2xl" dangerouslySetInnerHTML={{__html: project.body}}/>
+            
 
   </div>
 };
