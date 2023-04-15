@@ -14,7 +14,7 @@ const About: FC = () => {
 	})
 
 	return (
-		<section id="about" className="section lg:pt-56" ref={ref}>
+		<section id="about" className="section pb-8 md:py-16 lg:py-40" ref={ref}>
 			<div className="container mx-auto">
 				<div className="flex flex-col xl:justify-center xl:justify-end gap-y-10 xl:flex-row  xl:gap-x-20 lg:gap-y-0">
 					{/* img */}
@@ -23,7 +23,7 @@ const About: FC = () => {
 						initial="hidden"
 						whileInView={'show'}
 						viewport={{ once: true, amount: 0.3 }}
-						className="max-[600px]:mt-8 lg:-mt-32 flex justify-center "
+						className="max-sm:mt-8 lg:-mt-32 flex justify-center "
 						/* className="flex-1 bg-[url('/images/analysis.svg')] bg-contain bg-no-repeat h-[740px] mix-blend-lighten bg-top" */
 					>
 						<Image src="/images/analysis.svg" width="700px" height="700px" />
@@ -36,7 +36,7 @@ const About: FC = () => {
 						viewport={{ once: true, amount: 0.3 }}
 						className="flex-1 text-center lg:text-left"
 					>
-						<h2 className="h2 text-accent lg:mt-12-mt-16 md:text-6xl  lg:text-4xl text-3xl">
+						<h2 className="h2 text-accent -mt-16 md:-mt-24 lg:-mt-12 md:text-6xl  lg:text-4xl text-3xl">
 							About me.
 						</h2>
 						<h3 className="h3 mb-4 md:text-2xl text-xl">
@@ -109,7 +109,7 @@ const About: FC = () => {
 						</div>
 						<div
 							className="flex gap-x-8 items-center
-						justify-between md:justify-center lg:justify-start  max-[600px]:mx-0 max-[600px]:flex-col max-[600px]:mb-6
+						justify-between md:justify-center lg:justify-start  max-sm:mx-0 max-sm:flex-col max-sm:mb-6
 						"
 						>
 							<Button

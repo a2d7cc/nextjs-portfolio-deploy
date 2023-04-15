@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-	ul, ol {
+	.inner-html ul, ol {
 	  list-style: revert;
 	  @apply pl-6 md:pl-10
 	}
@@ -127,6 +127,6 @@ figure > img {
 	}
 
 	.section {
-		@apply py-8 lg:min-h-screen flex items-center;
+		@apply py-8 sm:py-14 md:py-16 lg:min-h-screen flex items-center;
 	}
 }
